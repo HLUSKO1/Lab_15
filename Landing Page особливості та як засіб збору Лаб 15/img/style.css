@@ -1,0 +1,1070 @@
+/* Загальні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Open Sans', sans-serif;   
+}
+
+body {
+    height:1px;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Сховати горизонтальну смугу прокручування */
+}
+
+
+/* Основний контейнер */
+.container {
+    max-width: 1200px; /* Максимальна ширина для контенту */
+    margin: 0 auto; /* Центрування контейнера */
+}
+
+/* Шапка */
+.panel {
+    display: flex; /* Використовуємо flexbox для розміщення елементів */
+    justify-content: space-between; /* Вирівнюємо елементи по краях */
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    padding: 10px; /* Внутрішні відступи для шапки */
+    background: rgba(33, 50, 71, 0.2); /* Фон з невеликою прозорістю */
+    width: 100%; /* Ширина на всю сторінку */
+    position: fixed; /* Фіксоване позиціонування */
+    top: 0; /* Відступ зверху */
+    left: 0; /* Відступ зліва */
+    z-index: 10; /* Встановлюємо верхній шар, щоб шапка не перекривалася */
+}
+
+/* Посилання навігації */
+.nav-links {
+    transform: translateX(-50px); /* Зсув навігаційних посилань (можна видалити, якщо не потрібно) */
+}
+
+.logo img {
+    margin-left: 145px; /* Відступ для логотипу зліва */
+}
+
+.nav-links a {
+    color: #ffffff; /* Колір тексту посилань */
+    text-decoration: none; /* Без підкреслення для тексту */
+    margin-left: 25px; /* Відступ між навігаційними посиланнями */
+    font-size: 13px; /* Розмір шрифту */
+    position: relative; /* Для позиціонування псевдоелементів */
+    transition: color 0.3s ease; /* Плавний перехід кольору при наведенні */
+}
+
+/* Перемістіть посилання Home вліво */
+.nav-links a:first-child {
+    margin-left: 0; /* Видалити відступ для переміщення вліво */
+}
+
+/* Стилі для псевдоелемента лінії над текстом */
+.nav-links a::before {
+    content: ""; /* Псевдоелемент для стилізації */
+    position: absolute; /* Абсолютне позиціонування для псевдоелемента */
+    width: 75px; /* Ширина псевдоелемента */
+    height: 2px; /* Висота псевдоелемента (зробіть товстішою, якщо потрібно) */
+    top: -19px; /* Вертикальне позиціонування псевдоелемента над текстом */
+    left: 50%; /* Центруємо псевдоелемент */
+    transform: translateX(-50%); /* Центруємо по горизонталі */
+    background-color: #4fa9ff; /* Колір псевдоелемента */
+    opacity: 0; /* Початкова непрозорість */
+    transition: opacity 0.3s ease-in-out; /* Плавний перехід для прозорості */
+}
+
+/* Відображення псевдоелемента при наведенні або активному стані */
+.nav-links a:hover::before,
+.nav-links a.active::before {
+    opacity: 1; /* Змінюємо непрозорість на 1 при наведенні */
+}
+
+
+
+/* Стилі для банера */
+.banner {
+    height: 100vh; /* Висота банера 50% від висоти вікна перегляду */
+    overflow: hidden; /* Сховати переповнені частини */
+}
+
+.banner img {
+    width: 100%;     /* Ширина - 100% */
+    height: auto;    /* Висота автоматична для збереження пропорцій */
+}
+
+.zagolovok1 {
+    position: absolute;
+    top: 415px;
+    left: 43%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 52px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+.zagolovok2 {
+    position: absolute;
+    top: 415px;
+    left: 55%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 52px; /* Змініть розмір на бажаний */
+    text-align: center;
+    font-weight: bold ;
+}
+
+.text1 {
+    position: absolute;
+    top: 480px;
+    left: 555px;
+    transform: translateX(-50%);
+    color: rgb(0, 255, 183);
+    font-size: 40px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+.text2 {
+    position: absolute;
+    top: 480px;
+    left: 655px;
+    color: rgb(255, 255, 255);
+    font-size: 40px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+.text3 {
+    position: absolute;
+    top: 555px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+.cart-line {
+    text-decoration: none; /* Видалення підкреслення з посилання */
+}
+
+.program1 {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s, filter 0.2s;
+    margin-left: 5px;
+    top: -175px;
+    position: relative;
+    transform: translateX(675px);
+    background-color: transparent; /* Фон прозрачный */
+}
+
+.program2 {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s, filter 0.2s;
+    margin-left: 5px;
+    top: -175px;
+    position: relative;
+    transform: translateX(675px);
+    background-color: transparent; /* Фон прозрачный */
+}
+
+.program3 {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s, filter 0.2s;
+    margin-left: 5px;
+    top: -172px;
+    position: relative;
+    transform: translateX(675px);
+    background-color: transparent; /* Фон прозрачный */
+
+}
+
+.program4 {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s, filter 0.2s;
+    margin-left: 5px;
+    top: -173px;
+    position: relative;
+    transform: translateX(675px);
+    background-color: transparent; /* Фон прозрачный */
+}
+
+.program1:hover,
+.program2:hover,
+.program3:hover,
+.program4:hover {
+    transform: scale(2.2); /* Збільшення на 20% */
+    filter: brightness(0) invert(1); /* Зміна зображення на білий */
+    position: relative;
+    transform: translateX(675px);
+}
+
+.block1 {
+    width: 100%;     /* Ширина - 100% */
+    height: 425px;
+    background-color:rgb(246, 246, 246);
+    top: -130px;
+    position: relative;
+}
+
+.zagolovok3 {
+    color:rgb(0, 166, 119);
+    position: absolute;
+    top: 815px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px; /* Змініть розмір на бажаний */
+    text-align: center;
+    font-weight: bold;
+}
+
+.zagolovok4 {
+    position: absolute;
+    top: 970px;
+    left: 270px;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.zagolovok5 {
+    position: absolute;
+    top: 970px;
+    left: 680px;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.zagolovok6 {
+    position: absolute;
+    top: 970px;
+    left: 1055px;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+
+.text4 {
+    position: absolute;
+    top: 1020px;
+    left: 360px;
+    transform: translateX(-50%);
+    color: gray;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    text-align: left; /* Вирівнювання по лівому краю */
+}
+
+
+.text5 {
+    position: absolute;
+    top: 1020px;
+    left: 750px;
+    transform: translateX(-50%);
+    color: grey;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    text-align: left; /* Вирівнювання по лівому краю */
+}
+
+.text6 {
+    position: absolute;
+    top: 1020px;
+    left: 1000px;
+    color: grey;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    text-align: left; /* Вирівнювання по лівому краю */
+}
+
+.block2 {
+    width: 100%;     /* Ширина - 100% */
+    height: 1620px;
+    background-color:rgb(255, 255, 255);
+    top: -130px;
+    position: relative;
+}
+
+.zagolovok7 {
+    color:rgb(0, 166, 119);
+    position: relative;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px; /* Змініть розмір на бажаний */
+    text-align: center;
+    font-weight: bold;
+}
+
+.text7 {
+    position: relative;
+    top: 120px;
+    color: grey;
+    font-size: 21px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+
+
+.button-group {
+    display: flex; /* Вирівнює кнопки горизонтально */
+    gap: 20px; /* Відступ між кнопками */
+    align-items: center; /* Вирівнює кнопки по вертикалі по центру */
+    position: relative;
+    top: 165px;
+    left: 440px;
+}
+
+
+.button-group input[type="radio"] {
+    display: none; /* Приховує радіо-кнопки, залишаючи лише видимі лейбли-кнопки */
+}
+
+.button {
+    background-color: transparent; /* Прозорий фон для кнопок за замовчуванням */
+    color: #112236; /* Колір тексту кнопок */
+    font-weight: bold; /* Робить текст напівжирним */
+    padding: 6px 22px; /* Відступи всередині кнопок */
+    cursor: pointer; /* Курсор змінюється на "палець" при наведенні */
+    border-radius: 4px; /* Округлення кутів кнопок */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавний перехід для кольорів при наведенні */
+}
+
+.button-group input[type="radio"]:checked + .button {
+    background-color:rgb(0, 166, 119); /* Зелений фон для активної кнопки */
+    color: white; /* Білий колір тексту для активної кнопки */
+}
+
+/* Ефект при наведенні */
+.button:hover {
+    background-color: rgb(0, 166, 119); /* Зелений фон при наведенні */
+    color: white; /* Білий текст при наведенні */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.photo0 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 200px;
+    overflow: hidden;
+}
+
+.photo0 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgb(0, 166, 119, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo0:hover .overlay1 {
+    opacity: 1;
+}
+
+.line1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 55px; /* зсуває другий рядок трохи нижче */
+}
+
+.line2 {
+    font-size: 0.8em;
+    margin-top: 10px; /* зсуває другий рядок трохи нижче */
+}
+
+
+
+.zagolovok8 {
+    color:rgb(0, 166, 119);
+    position: relative;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px; /* Змініть розмір на бажаний */
+    text-align: center;
+    font-weight: bold;
+}
+
+.text8 {
+    position: relative;
+    top: 320px;
+    color: grey;
+    font-size: 21px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+
+
+.member {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0; /* Прибираємо відступи між фото */
+}
+
+.photo1, .photo2, .photo3, .photo4 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    top: 380px;
+}
+
+.photo1 {
+    right: -100px;
+}
+
+.photo2 {
+    right: -60px;
+}
+
+.photo3 {
+    right: -15px;
+}
+
+.photo4 {
+    right: 35px;
+}
+
+.photo1 img, .photo2 img, .photo3 img, .photo4 img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo1:hover .overlay2,
+.photo2:hover .overlay2,
+.photo3:hover .overlay2,
+.photo4:hover .overlay2 {
+    opacity: 1;
+}
+
+.photo1:hover ~ .zagolovok9,
+.photo2:hover ~ .zagolovok10,
+.photo3:hover ~ .zagolovok11,
+.photo4:hover ~ .zagolovok12{
+    color: #00a677; /* Змінює колір тексту під фото на зелений */
+}
+
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 166, 119, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.line3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 25px; /* Розміщення дуже високо */
+}
+
+.line4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    margin-top: -185px;
+}
+
+.line5 {
+    font-size: 1.2em;
+    position: absolute;
+    margin-top: -100px;
+}
+
+.line6 {
+    font-size: 1.2em;
+    margin-top: 0px;
+}
+
+.line7 {
+    font-size: 1.2em;
+    margin-top: 0px;
+}
+
+.line8 {
+    font-size: 1.2em;
+    margin-top: 0px;
+}
+
+
+/* Стиль для тексту під фото */
+.zagolovok9 {
+    position: absolute;
+    top: 1490px;
+    left: 180px;
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.zagolovok10 {
+    position: absolute;
+    top: 1490px;
+    left: 500px;
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.zagolovok11 {
+    position: absolute;
+    top: 1490px;
+    left: 815px;
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.zagolovok12 {position: absolute;
+    top: 1490px;
+    left: 1150px;
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.text9 {
+    position: absolute;
+    top: 1525px;
+    left: 195px;
+    color: grey;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.text10 {
+    position: absolute;
+    top: 1525px;
+    left: 540px;
+    color: grey;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.text11 {
+    position: absolute;
+    top: 1525px;
+    left: 860px;
+    color: grey;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.text12 {position: absolute;
+    top: 1525px;
+    left: 1180px;
+    color: grey;
+    font-size: 12px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+
+
+.ekran {
+    width: 100%;
+    position: relative;
+}
+
+.ekran .city {
+    position: relative;
+    top: -150px;
+    width: 100vw;
+}
+
+.ekran .city img {
+    width: 100%;
+}
+
+.ekran .city::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 36, 80, 0.7);
+}
+
+.ekran .icons1, .ekran .icons2, .ekran .icons3, .ekran .icons4 {
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    /* Налаштуйте позицію кожної іконки */
+}
+
+.ekran .icons1 { top: 185px; right: 280px; }
+.ekran .icons2 { top: 185px; right: 550px; }
+.ekran .icons3 { top: 185px; right: 830px; }
+.ekran .icons4 { top: 185px; right: 1110px; }
+
+.ekran .icon {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 110px;
+    height: 110px;
+}
+
+.ekran .icon img {
+    width: 35%;
+    height: 35%;
+    object-fit: cover;
+}
+
+
+
+
+
+.zagolovok13 {
+    color:rgb(0, 166, 119);
+    position: relative;
+    top: -640px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px; /* Змініть розмір на бажаний */
+    text-align: center;
+    font-weight: bold;
+}
+    
+.text-13 {
+    position: relative;
+    top: -360px;
+    left: 255px;
+    color: white;
+    font-size: 18px; /* Змініть розмір на бажаний */
+}
+
+.text-14 {
+    position: relative;
+    top: -385px;
+    left: 530px;
+    color: white;
+    font-size: 18px; /* Змініть розмір на бажаний */
+}
+
+.text-15 {
+    position: relative;
+    top: -410px;
+    left: 805px;
+    color: white;
+    font-size: 18px; /* Змініть розмір на бажаний */
+}
+
+.text-16 {
+    position: relative;
+    top: -435px;
+    left: 1105px;
+    color: white;
+    font-size: 18px; /* Змініть розмір на бажаний */
+}  
+
+.chyslo1 {
+    position: relative;
+    top: -525px;
+    left: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px; /* Змініть розмір на бажаний */
+}
+
+.chyslo2{
+    position: relative;
+    top: -590px;
+    left: 565px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px; /* Змініть розмір на бажаний */
+}
+
+.chyslo3 {
+    position: relative;
+    top: -660px;
+    left: 850px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px; /* Змініть розмір на бажаний */
+}
+
+.chyslo4 {
+    position: relative;
+    top: -730px;
+    left: 1135px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px; /* Змініть розмір на бажаний */
+}  
+
+
+
+.block3 {
+    width: 100%;     /* Ширина - 100% */
+    height: 835px;
+    background-color:rgb(255, 255, 255);
+    top: -560px;
+    position: relative;
+}
+
+.zagolovok14 {
+    color:rgb(0, 166, 119);
+    position: relative;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px; /* Змініть розмір на бажаний */
+    text-align: center;
+    font-weight: bold;
+}
+
+.text14 {
+    position: relative;
+    top: 125px;
+    color: grey;
+    font-size: 21px; /* Змініть розмір на бажаний */
+    text-align: center;
+}
+
+.zagolovok15 {
+    position: relative;
+    top: 195px;
+    left: 120px;
+    color: rgb(0, 0, 0);
+    font-size: 21px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok16 {
+    position: relative;
+    top: 130px;
+    left: 420px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 28px; /* Змініть розмір на бажаний */
+}
+
+.text15 {
+    position: relative;
+    top: 190px;
+    left: 120px;
+    color: grey;
+    font-size: 13px; /* Змініть розмір на бажаний */
+ 
+}
+
+
+
+.form-container {
+    width: 100%;
+    max-width: 920px;
+    margin: 55px 390px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff; /* Додаємо білу рамку */
+    box-shadow: none; /* Прибираємо тінь */
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #fff; /* Додаємо білу рамку */
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #00a2ff;
+}
+
+.form-group input:not(:last-child) {
+    margin-right: 10px;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 50px;
+}
+ 
+
+.message-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: -50px;
+    left: 1155px;
+}
+
+.message-link img {
+    width: 28px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.message-link:hover {
+    color: #000000;
+}
+
+
+.icon-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px; /* Відстань між іконками */
+    width: 100px; /* Ширина галереї */
+    position: relative;
+    top: -285px;
+    left: 1300px;
+}
+
+.icon-gallery img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Кругла форма для кожної іконки */
+    object-fit: cover; /* Забезпечує обрізку зображення по центру */
+    background: transparent; /* Прозорий фон для зображень */
+}
+
+.map-container{
+    position: relative;
+    top: -190px;
+}
+
+.linia {
+    background-color: #112236; /* встановлює колір лінії */
+    position: relative;
+    top: -195px;
+    width: 100%; /* ширина лінії на всю ширину контейнера */
+    height: 5px; /* висота лінії */
+}
+
+.block4 {
+    width: 100%;     /* Ширина - 100% */
+    height: 400px;
+    background-color:rgb(255, 0, 0);
+    top: -560px;
+    position: relative;
+}
+
+.footer-logo {
+    position: relative;
+    top: 80px;
+    left: 105px;
+}
+
+.text16 { 
+    position: relative;
+    top: 105px;
+    left: 120px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+    line-height: 2; /* Встановлює відступ між рядками */
+}
+
+.zagolovok17 {
+    position: relative;
+    top: -80px;
+    left: 420px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.zagolovok18 {
+    position: relative;
+    top: -95px;
+    left: 760px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+    font-weight: bold;
+}
+
+.text17 { 
+    position: relative;
+    top: 17px;
+    left: 415px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+    line-height: 2; /* Встановлює відступ між рядками */
+}
+
+
+.zagolovok19 {
+    position: relative;
+    top: -105px;
+    left: 760px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok20 {
+    position: relative;
+    top: -90px;
+    left: 760px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok21 {
+    position: relative;
+    top: -75px;
+    left: 760px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok22 {
+    position: relative;
+    top: -60px;
+    left: 760px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok23 {
+    position: relative;
+    top: -175px;
+    left: 920px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok24 {
+    position: relative;
+    top: -160px;
+    left: 920px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok25 {
+    position: relative;
+    top: -145px;
+    left: 920px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.zagolovok26 {
+    position: relative;
+    top: -130px;
+    left: 920px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1); /* Прозорий фон */
+    position: relative;
+    top: -245px;
+    left: 415px;
+}
+
+.transparent-input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white; /* Змінити колір тексту при потребі */
+    flex: 1;
+    font-size: 16px;
+}
+
+.arrow {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px; /* Зсув вправо */
+  
+}
+
+.text18 {
+    position: relative;
+    top: -295px;
+    left: 1080px;
+    color: white;
+    font-size: 13px; /* Змініть розмір на бажаний */
+    line-height: 2; /* Встановлює відступ між рядками */
+}
+
+.hover-text {
+    color: inherit; /* Встановлюємо початковий колір */
+    transition: color 0.3s; /* Плавний перехід кольору */
+}
+
+.hover-text:hover {
+    color: black; /* Зміна кольору при наведенні */
+}
+
+.text19 {
+    position: relative;
+    top: -240px;
+    left: 1080px;
+    font-size: 13px; /* Змініть розмір на бажаний */
+}
+
+
+
